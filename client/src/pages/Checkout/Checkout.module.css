@@ -1,0 +1,121 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: var(--bg-color);
+}
+
+/* MAIN BOX (APPLE STYLE GLASS) */
+.box {
+  width: 100%;
+  max-width: 520px;
+
+  background: var(--card-color);
+  border: 1px solid var(--border-color); /* FIX DARK MODE BORDER */
+
+  backdrop-filter: blur(20px);
+
+  padding: 35px;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.box h1 {
+  color: var(--text-color);
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.box p {
+  color: var(--secondary-text);
+  margin-bottom: 25px;
+}
+
+/* PAYMENT METHODS WRAPPER */
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* PAYMENT CARD */
+.methodCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: var(--bg-color);
+  border: 1px solid var(--border-color); /* FIX DARK MODE */
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+/* HOVER EFFECT (APPLE FEEL) */
+.methodCard:hover {
+  transform: translateY(-2px);
+  border-color: #516cf0;
+}
+
+/* ICON INSIDE CARD */
+.methodCard span {
+  font-size: 24px;
+}
+
+/* TEXT */
+.methodCard h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.methodCard small {
+  color: var(--secondary-text);
+}
+
+/* ACTIVE STATE (IMPORTANT FIX FOR DARK MODE VISIBILITY) */
+.active {
+  border: 2px solid #516cf0 !important;
+  background: rgba(81, 108, 240, 0.1);
+  box-shadow: 0 0 0 4px rgba(81, 108, 240, 0.15);
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #516cf0;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4059d8;
+}
+
+/* ERROR */
+.error {
+  color: crimson;
+  margin-bottom: 15px;
+}

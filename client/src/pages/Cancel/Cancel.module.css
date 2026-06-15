@@ -1,0 +1,100 @@
+/* =========================
+   PAGE WRAPPER
+========================= */
+.container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background: transparent;
+}
+
+/* =========================
+   GLASS BOX (STRIPE STYLE)
+========================= */
+.box {
+  text-align: center;
+
+  background: var(--card-color);
+  backdrop-filter: blur(12px);
+
+  padding: 50px 35px;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+  max-width: 480px;
+  width: 100%;
+
+  animation: fadeUp 0.4s ease;
+}
+
+/* ICON */
+.icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+  animation: shake 0.6s ease;
+}
+
+/* TITLE */
+.box h1 {
+  color: crimson;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+/* TEXT */
+.box p {
+  color: var(--secondary-text);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* BUTTON AREA */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY BUTTON STYLE (APPLE SaaS) */
+.buttons button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #516cf0, #7c3aed);
+  color: white;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(81,108,240,0.3);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0); }
+}

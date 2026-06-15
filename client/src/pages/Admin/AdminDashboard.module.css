@@ -1,0 +1,195 @@
+/* =========================================
+   ADMIN DASHBOARD
+   STRIPE SAAS CONTROL PANEL STYLE
+========================================= */
+
+.adminContainer {
+  width: 92%;
+  max-width: 1000px;
+
+  margin: 50px auto;
+
+  color: var(--text);
+}
+
+/* TITLE */
+.adminContainer h1 {
+  text-align: center;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  margin-bottom: 30px;
+}
+
+/* =========================================
+   FORM (GLASS CARD)
+========================================= */
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 40px;
+}
+
+/* INPUTS */
+.addForm input,
+.addForm textarea {
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
+
+  background: transparent;
+
+  color: var(--text);
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.addForm input:focus,
+.addForm textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+/* BUTTON */
+.addForm button {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+
+  color: white;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.addForm button:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   PRODUCT LIST
+========================================= */
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ADMIN CARD */
+.adminCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  border-radius: 16px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+
+  transition: all 0.3s ease;
+}
+
+.adminCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+/* IMAGE */
+.adminCard img {
+  width: 55px;
+  height: 55px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+/* TEXT */
+.adminCard span {
+  flex: 1;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+/* REMOVE BUTTON */
+.removeBtn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+
+  border: none;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: scale(1.05);
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+
+  color: var(--text);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .adminCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .adminCard span {
+    margin-top: 10px;
+  }
+}

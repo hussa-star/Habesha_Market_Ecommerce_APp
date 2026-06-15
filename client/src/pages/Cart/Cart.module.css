@@ -1,0 +1,279 @@
+/* =========================================
+   PREMIUM CART PAGE
+   STRIPE + APPLE GLASSMORPHISM STYLE
+========================================= */
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 60px auto;
+
+  color: var(--text);
+}
+
+/* PAGE TITLE */
+.container h1 {
+  font-size: 34px;
+  font-weight: 900;
+
+  margin-bottom: 30px;
+
+  letter-spacing: -0.5px;
+}
+
+/* =========================================
+   CART LIST LAYOUT
+========================================= */
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+/* =========================================
+   CART CARD (GLASS STYLE)
+========================================= */
+
+.card {
+  display: flex;
+  gap: 20px;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+}
+
+/* IMAGE */
+.card img {
+  width: 110px;
+  height: 110px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* INFO */
+.info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* TITLE */
+.info h3 {
+  font-size: 16px;
+  font-weight: 800;
+
+  color: var(--text);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* PRICE */
+.info p {
+  font-size: 14px;
+
+  color: var(--text);
+  opacity: 0.7;
+}
+
+/* =========================================
+   INPUT (QUANTITY)
+========================================= */
+
+.info input {
+  width: 90px;
+
+  padding: 8px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border);
+
+  background: transparent;
+
+  color: var(--text);
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.info input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+/* =========================================
+   REMOVE BUTTON
+========================================= */
+
+.info button {
+  width: fit-content;
+
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.info button:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   CHECKOUT BOX (STRIPE STYLE SUMMARY)
+========================================= */
+
+.checkout {
+  margin-top: 30px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.08));
+
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(16px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout h2 {
+  font-size: 22px;
+  font-weight: 900;
+
+  color: var(--text);
+}
+
+/* CHECKOUT BUTTON */
+.checkout button {
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.25);
+}
+
+.checkout button:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty {
+  text-align: center;
+
+  padding: 50px;
+
+  font-size: 18px;
+
+  color: var(--text);
+  opacity: 0.6;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+  color: #ef4444;
+
+  margin-bottom: 15px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   LOADER
+========================================= */
+
+.loader {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  color: var(--text);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .checkout {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .checkout button {
+    width: 100%;
+  }
+}

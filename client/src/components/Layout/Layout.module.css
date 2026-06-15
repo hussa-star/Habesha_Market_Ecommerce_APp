@@ -1,0 +1,12 @@
+.wrapper {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-color);
+}
+
+.mainContent {
+  flex: 1;
+}

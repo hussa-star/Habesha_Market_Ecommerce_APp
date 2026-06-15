@@ -1,0 +1,466 @@
+/* =========================================
+   PREMIUM ECOMMERCE HEADER
+   APPLE + STRIPE STYLE
+   ========================================= */
+
+/* =========================================
+   HEADER CONTAINER
+   ========================================= */
+
+.header {
+  width: 100%;
+  height: 78px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+
+  transition: all 0.35s ease;
+}
+
+/* Main inner container */
+
+.container {
+  width: 92%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+  font-size: 1.9rem;
+
+  font-weight: 900;
+
+  color: #0f172a;
+
+  cursor: pointer;
+
+  letter-spacing: -1px;
+
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.logo span {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* =========================================
+   RIGHT CONTROLS
+   Theme Toggle + Mobile Menu
+   ========================================= */
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =========================================
+   THEME TOGGLE BUTTON
+   ========================================= */
+
+.themeToggle {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: rgba(124, 58, 237, 0.08);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.themeToggle:hover {
+  transform: rotate(15deg);
+
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+   ========================================= */
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLinks a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #475569;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #7c3aed;
+}
+
+/* Animated underline */
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: #7c3aed;
+
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   CART LINK
+   ========================================= */
+
+.cartLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================
+   USER SECTION
+   ========================================= */
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  border-left: 1px solid #e2e8f0;
+
+  padding-left: 20px;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: rgba(124, 58, 237, 0.08);
+
+  padding: 10px 15px;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+/* =========================================
+   AUTH BUTTONS
+   ========================================= */
+
+.authButtons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Sign In Button */
+
+.loginBtn {
+  background: transparent;
+
+  color: #334155;
+
+  border: 1px solid #dbe2ea;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+  border-color: #7c3aed;
+
+  color: #7c3aed;
+
+  transform: translateY(-2px);
+}
+
+/* Create Account Button */
+
+.registerBtn {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+.registerBtn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.35);
+}
+
+/* =========================================
+   LOGOUT BUTTON
+   ========================================= */
+
+.logoutBtn {
+  background: rgba(239, 68, 68, 0.12);
+
+  color: #ef4444;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.2);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   ADMIN PANEL BUTTON
+   ========================================= */
+
+.adminLink {
+  border: 1px solid #7c3aed;
+
+  color: #7c3aed !important;
+
+  padding: 8px 14px;
+
+  border-radius: 12px;
+
+  font-weight: 700 !important;
+}
+
+.adminLink:hover {
+  background: #7c3aed;
+
+  color: white !important;
+}
+
+/* =========================================
+   MOBILE MENU ICON
+   ========================================= */
+
+.menuIcon {
+  display: none;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  color: #0f172a;
+}
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+.darkHeader {
+  background: rgba(15, 23, 42, 0.95) !important;
+
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.darkHeader .logo {
+  color: white;
+}
+
+.darkHeader .navLinks a {
+  color: #cbd5e1;
+}
+
+.darkHeader .navLinks a:hover {
+  color: #8b5cf6;
+}
+
+.darkHeader .greeting {
+  background: rgba(124, 58, 237, 0.18);
+
+  color: white;
+}
+
+.darkHeader .userSection {
+  border-left-color: rgba(255, 255, 255, 0.08);
+}
+
+.darkHeader .menuIcon {
+  color: white;
+}
+
+.darkHeader .loginBtn {
+  color: white;
+
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.darkHeader .loginBtn:hover {
+  border-color: #8b5cf6;
+}
+
+.darkHeader .adminLink {
+  border-color: #8b5cf6;
+
+  color: #8b5cf6 !important;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .rightControls {
+    position: absolute;
+    right: 5%;
+  }
+
+  .navLinks {
+    position: absolute;
+
+    top: 78px;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 0 0 20px 20px;
+
+    flex-direction: column;
+
+    padding: 25px 0;
+
+    gap: 22px;
+
+    display: none;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .authButtons {
+    flex-direction: column;
+
+    width: 90%;
+  }
+
+  .userSection {
+    flex-direction: column;
+
+    border-left: none;
+
+    padding-left: 0;
+
+    width: 90%;
+
+    border-top: 1px solid #e2e8f0;
+
+    padding-top: 20px;
+  }
+
+  .loginBtn,
+  .registerBtn,
+  .logoutBtn {
+    width: 100%;
+  }
+
+  .darkHeader .navLinks {
+    background: rgba(15, 23, 42, 0.98);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .darkHeader .userSection {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+}
