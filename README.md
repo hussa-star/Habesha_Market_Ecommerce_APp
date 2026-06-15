@@ -465,7 +465,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Hussien**
 
-- GitHub: [@your-username](https://github.com/hussa-star)
+- GitHub: [@hussa-star](https://github.com/hussa-star)
 
 ---
 
